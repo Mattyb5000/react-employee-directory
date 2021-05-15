@@ -1,8 +1,8 @@
 import React from "react";
-import API from "../utils/API";
+
 
 function Table(props) {
-    console.log(props)
+    console.log(props) 
   return (
     <table className="table">
       <tr>
@@ -13,11 +13,11 @@ function Table(props) {
           <th>Gender</th>
       </tr>
       <tr>
-          <tr>{props.thumbnail}</tr>
-          <tr>{props.name}</tr>
-          <tr>{props.phone}</tr>
-          <tr>{props.email}</tr>
-          <tr>{props.gender}</tr>
+          <td>{props.image}</td>
+          <td>{props.name}</td>
+          <td>{props.phone}</td>
+          <td>{props.email}</td>
+          <td>{props.gender}</td>
       </tr>
     </table>
   );

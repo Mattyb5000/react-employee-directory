@@ -1,34 +1,50 @@
-import React, { Component } from 'react';
-import API from '../utils/API';
-// import Header from "./Header.js";
+import React, { Component } from "react";
+import API from "../utils/API";
+import Table from './Table';
+
+
 
 class Container extends Component {
   state = {
     employees: [],
-    filteredEmployees: []
+    filteredEmployees: [],
   };
 
   componentDidMount() {
     API.getEmployee().then((res) => {
-      const emp = res.data.results.map((employee) => {
-        return employee;
-        
-      });
-      console.log(emp[1]);
-      
-      this.setState({ employees: emp });
-    });
+      this.setState({
+        employees: res.data.results, });
+      })
   }
-
   render() {
     return (
       <div className="container">
-      Container
-    </div>
-    );
-    
+        <Table employees={this.state.employees} />
+      </div>
+    )
   }
 }
 
+// class Container extends Component {
+//   state = {
+//     API
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         {this.state.employees.map((employee) => (
+//           <Table
+//             image={employee.picture.thumbnail}
+//             name={employee.name}
+//             phone={employee.phone}
+//             email={employee.email}
+//             gender={employee.gender}
+//           />
+//         ))}
+//       </div>
+//     );
+//   }
+// }
+
 export default Container;
-    
