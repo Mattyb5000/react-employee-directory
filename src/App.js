@@ -1,16 +1,17 @@
-import './App.css';
-import API from './utils/API.js'
-import Employees from "./components/Employees"
+import API from "./utils/API.js";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import Table from "./components/Table";
 
 function App() {
-  console.log(API.getRandomEmployee())
+  console.log(API.getEmployee());
   return (
-  
-      // <h1>Employee Directory</h1>
-      <Employees />
-   
+    <div>
+      <Header />
+      <Container />
+      <Table />
+    </div>
   );
 }
 
 export default App;
-
