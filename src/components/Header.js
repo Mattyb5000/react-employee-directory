@@ -2,8 +2,9 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="container">
+    <div className="header">
       <h1>Employee Directory</h1>
+      <p>Click on carrots to filter by heading or use the search bar to narrow your results</p>
     </div>
   );
 }
