@@ -6,15 +6,19 @@ import Table from './Table';
 
 class Container extends Component {
   state = {
-    employees: [{}],
+    employees: [],
     filteredEmployees: [],
   };
 
   componentDidMount() {
     API.getEmployee().then((res) => {
+      const emp = res.data.results.map((employee) => {
+        return employee;
+      });
       this.setState({
-        employees: res.data.results, });
-      })
+        employees: emp, });
+      });
+      // console.log("this is the state",this.state.employees);
   }
   render() {
     return (

@@ -13,11 +13,11 @@ function Table(props) {
           <th>Gender</th>
       </tr>
       <tr>
-          <td>{props.image}</td>
-          <td>{props.name}</td>
-          <td>{props.phone}</td>
-          <td>{props.email}</td>
-          <td>{props.gender}</td>
+          <td>{}</td>
+          <td>{}</td>
+          <td>{}</td>
+          <td>{}</td>
+          <td>{}</td>
       </tr>
     </table>
   );
