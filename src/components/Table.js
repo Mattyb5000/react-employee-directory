@@ -16,11 +16,11 @@ function Table(props) {
           console.log(employee)
           return (
            <tr>
-           <td>{employee.name.first}{employee.name.last}</td>
-           <td>{}</td>
-           <td>{}</td>
-           <td>{}</td>
-           <td>{}</td>
+           <td>{employee.picture.thumbnail}</td>
+           <td>{employee.name.first} {employee.name.last}</td>
+           <td>{employee.phone}</td>
+           <td>{employee.email}</td>
+           <td>{employee.gender}</td>
        </tr>
       )})}
      
