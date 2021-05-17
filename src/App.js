@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Table from "./components/Table";
 
 function App() {
-  console.log(API.getEmployee());
   return (
     <div>
       <Header />

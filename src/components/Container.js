@@ -15,8 +15,9 @@ class Container extends Component {
       const emp = res.data.results.map((employee) => {
         return employee;
       });
+      console.log("response", res.data)
       this.setState({
-        employees: emp, });
+        employees: res.data.results });
       });
       // console.log("this is the state",this.state.employees);
   }

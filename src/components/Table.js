@@ -12,13 +12,18 @@ function Table(props) {
           <th>Email</th>
           <th>Gender</th>
       </tr>
-      <tr>
-          <td>{}</td>
-          <td>{}</td>
-          <td>{}</td>
-          <td>{}</td>
-          <td>{}</td>
-      </tr>
+      {props.employees.map((employee) => {
+          console.log(employee)
+          return (
+           <tr>
+           <td>{employee.name.first}{employee.name.last}</td>
+           <td>{}</td>
+           <td>{}</td>
+           <td>{}</td>
+           <td>{}</td>
+       </tr>
+      )})}
+     
     </table>
   );
 }
