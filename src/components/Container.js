@@ -12,9 +12,7 @@ class Container extends Component {
 
   componentDidMount() {
     API.getEmployee().then((res) => {
-      const emp = res.data.results.map((employee) => {
-        return employee;
-      });
+     
       console.log("response", res.data)
       this.setState({
         employees: res.data.results });

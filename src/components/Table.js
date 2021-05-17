@@ -13,10 +13,10 @@ function Table(props) {
           <th>Gender</th>
       </tr>
       {props.employees.map((employee) => {
-          console.log(employee)
+          console.log("another employee", employee)
           return (
-           <tr>
-           <td>{employee.picture.thumbnail}</td>
+           <tr key={employee.login.uuid}>
+           <td>{<img src={employee.picture.thumbnail} alt="employee thumbnail" />}</td>
            <td>{employee.name.first} {employee.name.last}</td>
            <td>{employee.phone}</td>
            <td>{employee.email}</td>
