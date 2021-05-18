@@ -3,7 +3,7 @@ import React from "react";
 function SearchBar() {
   return (
     <select
-      class="form-select form-select-lg mb-3"
+      class="form-select form-select-sm mb-3"
       aria-label=".form-select-lg example"
     >
       <option selected>Choose a gender from this dropdown</option>
