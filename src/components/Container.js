@@ -4,6 +4,7 @@ import Table from './Table';
 
 
 
+
 class Container extends Component {
   state = {
     employees: [],
@@ -17,10 +18,11 @@ class Container extends Component {
       this.setState({
         employees: res.data.results });
       });
-      // console.log("this is the state",this.state.employees);
+
   }
   render() {
     return (
+    
       <div className="container">
         <Table employees={this.state.employees} />
       </div>
