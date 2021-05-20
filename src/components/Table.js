@@ -2,8 +2,6 @@ import React from "react";
 // import Container from './Container';
 
 function Table(props) {
-  // console.log(props)
-
   //handleFilter() this is filtering out as I type
   return (
       
