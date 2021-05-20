@@ -13,6 +13,18 @@ class Container extends Component {
 
   handleSort = () => {
     // console.log("hello")
+    // function compare( a, b ) {
+    //   if ( a.last_nom < b.last_nom ){
+    //     return -1;
+    //   }
+    //   if ( a.last_nom > b.last_nom ){
+    //     return 1;
+    //   }
+    //   return 0;
+    // }
+    
+    // objs.sort( compare );
+
     const lastNames = [];
     this.state.employees.forEach((employee) => {
         lastNames.push(employee.name.last)
