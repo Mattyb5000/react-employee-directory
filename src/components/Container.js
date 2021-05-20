@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Table from './Table';
-import SearchBar from './SearchBar';
-
-
-
-
 class Container extends Component {
   state = {
     employees: [],
     sortedEmployees: [],
+    filteredEmployees: []
   };
 
   handleSort = () => {
@@ -31,7 +27,7 @@ class Container extends Component {
 };
 
 handleInputChange = event => {
-  this.setState({ search: event.target.value });
+  this.setState({ filteredEmployees: event.target.value });
 };
 
   componentDidMount() {
@@ -48,12 +44,13 @@ handleInputChange = event => {
     return (
     
       <div className="container">
+       
         <Table 
      
           employees={this.state.employees}
           handleSort={this.handleSort}
         />
-        <SearchBar />
+        
         
       </div>
     )
