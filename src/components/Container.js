@@ -22,19 +22,19 @@ class Container extends Component {
     const lastNames = this.state.employees.sort(compare);
 
     this.setState({
-      employees: lastNames,
+      filteredEmployees: lastNames,
     });
     //  set state to sorted array
   };
 
   handleInputChange = (event) => {
     this.setState({ search: event.target.value });
-    const filteredEmployees = this.state.results.filter((employee) => {
+    const filteredEmployees = this.state.employees.filter((employee) => {
       return (
         employee.name.last.toLowerCase().indexOf(event.target.value) !== -1
       );
     });
-    this.setState({ employees: filteredEmployees, });
+    this.setState({ filteredEmployees: filteredEmployees, });
   };
 
   componentDidMount() {
@@ -42,27 +42,25 @@ class Container extends Component {
       // console.log("response", res.data)
       this.setState({
         employees: res.data.results,
+        filteredEmployees: res.data.results
       });
     });
   }
   render() {
     return (
-      (
+      
         <div>
           <SearchBar
             employees={this.state.employees}
             handleInputChange={this.handleInputChange}
           />
-        </div>
-      ),
-      (
-        <div className="container">
-          <Table
-            employees={this.state.employees}
+            <Table
+            employees={this.state.filteredEmployees}
             handleSort={this.handleSort}
           />
         </div>
-      )
+      
+   
     );
   }
 }
