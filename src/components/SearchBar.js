@@ -10,7 +10,6 @@ function SearchBar(props) {
           onChange={props.handleInputChange}
           placeholder="Search by last name"
         />
-    
       </div>
     </form>
   );

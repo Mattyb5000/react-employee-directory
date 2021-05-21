@@ -24,7 +24,6 @@ class Container extends Component {
     this.setState({
       filteredEmployees: lastNames,
     });
-    //  set state to sorted array
   };
 
   handleInputChange = (event) => {
@@ -34,33 +33,29 @@ class Container extends Component {
         employee.name.last.toLowerCase().indexOf(event.target.value) !== -1
       );
     });
-    this.setState({ filteredEmployees: filteredEmployees, });
+    this.setState({ filteredEmployees: filteredEmployees });
   };
 
   componentDidMount() {
     API.getEmployee().then((res) => {
-      // console.log("response", res.data)
       this.setState({
         employees: res.data.results,
-        filteredEmployees: res.data.results
+        filteredEmployees: res.data.results,
       });
     });
   }
   render() {
     return (
-      
-        <div>
-          <SearchBar
-            employees={this.state.employees}
-            handleInputChange={this.handleInputChange}
-          />
-            <Table
-            employees={this.state.filteredEmployees}
-            handleSort={this.handleSort}
-          />
-        </div>
-      
-   
+      <div>
+        <SearchBar
+          employees={this.state.employees}
+          handleInputChange={this.handleInputChange}
+        />
+        <Table
+          employees={this.state.filteredEmployees}
+          handleSort={this.handleSort}
+        />
+      </div>
     );
   }
 }

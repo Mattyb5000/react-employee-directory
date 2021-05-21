@@ -2,9 +2,7 @@ import React from "react";
 // import Container from './Container';
 
 function Table(props) {
-  //handleFilter() this is filtering out as I type
   return (
-      
     <table className="table">
       <thead>
         <th>Image</th>
@@ -15,7 +13,6 @@ function Table(props) {
       </thead>
       <tbody>
         {props.employees.map((employee) => {
-          //   console.log("another employee", employee)
           return (
             <tr key={employee.login.uuid}>
               <td>
