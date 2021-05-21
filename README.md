@@ -17,7 +17,7 @@ Visit the Employee Directory [here!](https://mattyb5000.github.io/react-employee
 
 You can click the "Name" header above the employee name column to sort employees alphabetically by last name. You can also use the search bar to filter names. Just begin typing and the names will filter to match your search terms.
 
-![alt text](image.jpg)
+![alt text](employee-directory.gif)
 
 ---
 Follow me on GitHub!
